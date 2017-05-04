@@ -227,7 +227,7 @@ open class Popover: UIView {
     open func show(_ contentView: UIView, point: CGPoint, inView: UIView, overlayContainerView: UIView) {
         if showBlackOverlay {
             self.blackOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            self.blackOverlay.frame = inView.bounds
+            self.blackOverlay.frame = overlayContainerView.bounds
             
             if let overlayBlur = self.overlayBlur {
                 let effectView = UIVisualEffectView(effect: overlayBlur)
